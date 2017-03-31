@@ -12,9 +12,9 @@ def beta_calc(r_i1, r_i):
 	return (np.matmul(np.transpose(r_i1),r_i1)*0.1)/((np.matmul(np.transpose(r_i),r_i))*0.1)
 
 if __name__ == '__main__':
-	A = np.matrix('4 1;1 3')
-	b = np.matrix('1;2')
-	x_0 = np.matrix('0;0')
+	A = np.matrix('2 -1 0;-1 2 -1;0 -1 2')
+	b = np.matrix('1;2;3')
+	x_0 = np.matrix('0;0;0')
 	x_i = x_0
 	d_0 = linear_iter(A,x_0,b)
 	d_i = d_0
@@ -35,5 +35,5 @@ if __name__ == '__main__':
 		i += 1
 	print(x_i)
 	print(i)
-	'''Takes 63 iterations for 3x3 example'''
-	'''Takes 35 iterations for 2x2 example'''
+	'''Takes 3 iterations for 3x3 example'''
+	'''Takes 2 iterations for 2x2 example'''
